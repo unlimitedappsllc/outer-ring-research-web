@@ -70,6 +70,11 @@
   footer .cols{display:flex;gap:28px;flex-wrap:wrap;align-items:flex-start}
   footer img{width:38px;height:38px}
   footer .spacer{flex:1}
+  .markline{font-style:italic;color:var(--muted);font-size:.98rem;margin-top:14px}
+  .svc-head{display:flex;gap:36px;align-items:flex-start;flex-wrap:wrap}
+  .svc-head .txt{flex:1;min-width:300px}
+  .svc-head .dial{width:288px;height:288px;flex:none}
+  @media (max-width:640px){.svc-head .dial{margin:0 auto}}
   @media (max-width:640px){.hero h1{font-size:2rem}.nav nav{display:none}}
 </style>
 </head>
@@ -98,6 +103,7 @@
     <img class="seal" src="assets/outer-ring-logo-seal.png" alt="Outer Ring seal of approval">
     <h1>Your product, tested the way your customers will actually use it.</h1>
     <div class="tag">Product testing · User research · R&amp;D</div>
+    <p class="markline">The nine segments of our mark are the nine services of the Ring — one segment for each service we offer.</p>
     <p class="promise">Outer Ring is a standing team of 69 researchers who run your real, live product end to end — signup, core flows, checkout, all of it — and report back in their own words, with a clear verdict and full cost accounting.</p>
     <a class="btn" href="mailto:contact@outerringresearch.com">Start a conversation</a>
     <a class="btn ghost" href="#services" style="margin-left:10px">See the services</a>
@@ -111,8 +117,26 @@
 
 <section id="services">
   <div class="wrap">
-    <h2>Nine services, one standard: true live experience</h2>
-    <p class="lede">Every engagement runs on the real product — never a staging copy, never a script-reading walkthrough. Each of the nine segments of our mark stands for one of these services.</p>
+    <div class="svc-head">
+      <div class="txt">
+        <h2>Nine services, one standard: true live experience</h2>
+        <p class="lede">Every engagement runs on the real product — never a staging copy, never a script-reading walkthrough. The dial is our mark, opened up: nine segments, numbered in the order of the services below — each segment of the logo is one service of the Ring.</p>
+      </div>
+      <svg class="dial" viewBox="0 0 400 400" role="img" aria-label="Dial of nine green segments, numbered one to nine, one segment for each Outer Ring service">
+        <path d="M 168.0 55.5 A 148 148 0 0 1 232.0 55.5" fill="none" stroke="#00B050" stroke-width="40" stroke-linecap="round"/><text x="200.0" y="58.0" text-anchor="middle" font-size="19" font-weight="700" fill="#ffffff">1</text>
+        <path d="M 268.3 68.7 A 148 148 0 0 1 317.4 109.9" fill="none" stroke="#00B050" stroke-width="40" stroke-linecap="round"/><text x="295.1" y="92.6" text-anchor="middle" font-size="19" font-weight="700" fill="#ffffff">2</text>
+        <path d="M 336.7 143.4 A 148 148 0 0 1 347.9 206.5" fill="none" stroke="#00B050" stroke-width="40" stroke-linecap="round"/><text x="345.8" y="180.3" text-anchor="middle" font-size="19" font-weight="700" fill="#ffffff">3</text>
+        <path d="M 341.2 244.5 A 148 148 0 0 1 309.1 300.0" fill="none" stroke="#00B050" stroke-width="40" stroke-linecap="round"/><text x="328.2" y="280.0" text-anchor="middle" font-size="19" font-weight="700" fill="#ffffff">4</text>
+        <path d="M 279.5 324.8 A 148 148 0 0 1 219.3 346.7" fill="none" stroke="#00B050" stroke-width="40" stroke-linecap="round"/><text x="250.6" y="345.1" text-anchor="middle" font-size="19" font-weight="700" fill="#ffffff">5</text>
+        <path d="M 180.7 346.7 A 148 148 0 0 1 120.5 324.8" fill="none" stroke="#00B050" stroke-width="40" stroke-linecap="round"/><text x="149.4" y="345.1" text-anchor="middle" font-size="19" font-weight="700" fill="#ffffff">6</text>
+        <path d="M 90.9 300.0 A 148 148 0 0 1 58.8 244.5" fill="none" stroke="#00B050" stroke-width="40" stroke-linecap="round"/><text x="71.8" y="280.0" text-anchor="middle" font-size="19" font-weight="700" fill="#ffffff">7</text>
+        <path d="M 52.1 206.5 A 148 148 0 0 1 63.3 143.4" fill="none" stroke="#00B050" stroke-width="40" stroke-linecap="round"/><text x="54.2" y="180.3" text-anchor="middle" font-size="19" font-weight="700" fill="#ffffff">8</text>
+        <path d="M 82.6 109.9 A 148 148 0 0 1 131.7 68.7" fill="none" stroke="#00B050" stroke-width="40" stroke-linecap="round"/><text x="104.9" y="92.6" text-anchor="middle" font-size="19" font-weight="700" fill="#ffffff">9</text>
+        <circle cx="200" cy="200" r="88" fill="none" stroke="#58595B" stroke-width="13"/>
+        <text x="200" y="196" text-anchor="middle" font-size="44" font-weight="700" fill="#58595B">9</text>
+        <text x="200" y="224" text-anchor="middle" font-size="14.5" letter-spacing="2" fill="#58595B">SERVICES</text>
+      </svg>
+    </div>
     <div class="grid">
       <div class="card"><span class="num">1</span><h3>Pre-launch product testing</h3><p>Full-team runs on the real, live product before launch. Every run ends in a verdict: CLEARED, FIXES REQUIRED, or HELD.</p></div>
       <div class="card"><span class="num">2</span><h3>Generational testing</h3><p>Four cohorts — 18–29, 30–44, 45–59, and 60+ — because a product that only makes sense to one generation has a blind spot.</p></div>
