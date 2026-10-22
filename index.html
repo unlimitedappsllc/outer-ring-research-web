@@ -104,6 +104,15 @@
   .footnote .fn-tag{font-family:var(--mono);font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);margin-bottom:10px}
   .footnote p{font-size:1rem}
 
+  /* Evidence — sourced stat band */
+  .stats{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin-bottom:34px}
+  .stat{border:1px solid var(--line-dark);background:#fff;padding:28px 26px}
+  .stat .num{font-family:var(--serif);font-size:2.5rem;font-weight:700;line-height:1.1;color:var(--ink);margin-bottom:10px}
+  .stat p{font-size:.99rem;margin-bottom:14px}
+  .stat .src{font-family:var(--mono);font-size:.7rem;letter-spacing:.16em;text-transform:uppercase;color:var(--green-dark)}
+  .pull{font-family:var(--serif);font-style:italic;font-size:1.13rem;color:var(--ink);border-left:3px solid var(--green);padding:4px 0 4px 18px;max-width:56ch}
+  @media (max-width:640px){.stats{grid-template-columns:1fr}}
+
   /* Engage — storefront + intake */
   .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-bottom:20px}
   .card{border:1px solid var(--line-dark);background:#fff;padding:28px 26px;display:flex;flex-direction:column}
@@ -265,9 +274,40 @@
   </div>
 </section>
 
+<section id="evidence">
+  <div class="wrap">
+    <div class="eyebrow">04 · The Evidence</div>
+    <h2>What launching untested costs.</h2>
+    <p class="lede">The numbers below are not ours. They are the published record of what happens when products meet their customers untested — and why a business that skips this work has done itself a disservice.</p>
+    <div class="stats">
+      <div class="stat">
+        <div class="num">70.22%</div>
+        <p>The average documented cart abandonment rate across 50 studies. A large share of it is fixable design: forced account creation, long checkouts, site errors.</p>
+        <div class="src">Baymard Institute</div>
+      </div>
+      <div class="stat">
+        <div class="num">80%</div>
+        <p>Of the features in the average product are rarely or never used. Teams ship blind, and pay full price for what nobody touches.</p>
+        <div class="src">Pendo, 2019</div>
+      </div>
+      <div class="stat">
+        <div class="num">+83%</div>
+        <p>The average measured improvement in key metrics after usability work, across 72 case studies — against a best-practice spend of about 10% of the project budget.</p>
+        <div class="src">Nielsen Norman Group</div>
+      </div>
+      <div class="stat">
+        <div class="num">43%</div>
+        <p>Of recent venture-backed shutdowns involved poor product–market fit: companies that built before they knew.</p>
+        <div class="src">CB Insights</div>
+      </div>
+    </div>
+    <p class="pull">Launching untested means volunteering your customers to do the testing.</p>
+  </div>
+</section>
+
 <section id="engage">
   <div class="wrap">
-    <div class="eyebrow">04 · Engage</div>
+    <div class="eyebrow">05 · Engage</div>
     <h2>Three ways to engage the Ring</h2>
     <p class="lede">Every engagement is scoped from your brief and quoted fixed before any work begins. Choose the shape that fits where your product is — or send the brief below and we will recommend one.</p>
     <div class="cards">
@@ -412,7 +452,7 @@
 
 <section id="contact" class="alt">
   <div class="wrap contact">
-    <div class="eyebrow">05 · Contact</div>
+    <div class="eyebrow">06 · Contact</div>
     <h2>Work with our team</h2>
     <p>Tell us what you are about to launch and what a confident launch looks like for you. We will reply with what a run would cover and what it would cost.</p>
     <a class="btn" href="mailto:contact@outerringresearch.com">contact@outerringresearch.com</a>
