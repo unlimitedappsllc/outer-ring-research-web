@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Outer Ring — Testing &amp; Research | Pre-Launch Product Testing &amp; User Research</title>
+<meta name="description" content="Outer Ring is a pre-launch product testing and user research team: 69 researchers who test your real, live product end to end and deliver session reports, a roll-up verdict, and full cost accounting. A division of Unlimited Apps.">
+<link rel="icon" type="image/png" href="assets/outer-ring-logo-flat.png">
+<link rel="apple-touch-icon" href="assets/outer-ring-logo-flat.png">
+<style>
+  :root{
+    --green:#00B050; --green-dark:#00873d; --gray:#58595B; --ink:#23262b;
+    --muted:#6b7078; --bg:#ffffff; --panel:#f5f7f6; --line:#e3e7e4;
+    --radius:14px;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;color:var(--ink);background:var(--bg);line-height:1.6}
+  a{color:var(--green-dark);text-decoration:none}
+  a:hover{text-decoration:underline}
+  .wrap{max-width:1120px;margin:0 auto;padding:0 24px}
+  /* Header */
+  header{position:sticky;top:0;background:rgba(255,255,255,.96);border-bottom:1px solid var(--line);z-index:10;backdrop-filter:blur(6px)}
+  .nav{display:flex;align-items:center;gap:14px;padding:12px 0}
+  .nav img{width:44px;height:44px}
+  .brand{line-height:1.25}
+  .brand strong{font-size:1.06rem;letter-spacing:.2px}
+  .brand span{display:block;font-size:.8rem;color:var(--muted)}
+  .nav .spacer{flex:1}
+  .nav nav a{margin-left:22px;color:var(--ink);font-size:.95rem}
+  .btn{display:inline-block;background:var(--green);color:#fff;font-weight:600;padding:11px 22px;border-radius:999px;border:1px solid var(--green)}
+  .btn:hover{background:var(--green-dark);text-decoration:none}
+  .btn.ghost{background:#fff;color:var(--green-dark)}
+  /* Hero */
+  .hero{text-align:center;padding:72px 0 56px;background:linear-gradient(180deg,#f2f9f4,#ffffff)}
+  .hero img.seal{width:190px;height:190px}
+  .hero h1{font-size:2.6rem;line-height:1.15;margin:22px 0 6px}
+  .hero .tag{color:var(--gray);font-size:1.05rem;letter-spacing:.4px;text-transform:uppercase}
+  .hero p.promise{font-size:1.25rem;max-width:720px;margin:18px auto 28px;color:#33373d}
+  .verdict-chips{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-top:30px}
+  .chip{font-weight:700;font-size:.85rem;letter-spacing:.6px;padding:7px 16px;border-radius:999px;border:2px solid}
+  .chip.cleared{color:var(--green-dark);border-color:var(--green);background:#eafaf0}
+  .chip.fixes{color:#9a6a00;border-color:#e0a800;background:#fff7e0}
+  .chip.held{color:#a12622;border-color:#d43a35;background:#fdecea}
+  /* Sections */
+  section{padding:64px 0}
+  section.alt{background:var(--panel)}
+  h2{font-size:1.9rem;margin-bottom:10px}
+  .lede{color:var(--muted);max-width:760px;margin-bottom:34px;font-size:1.05rem}
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:18px}
+  .card{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:24px}
+  .card .num{display:inline-flex;align-items:center;justify-content:center;width:34px;height:34px;border-radius:50%;background:var(--green);color:#fff;font-weight:700;margin-bottom:12px}
+  .card h3{font-size:1.08rem;margin-bottom:6px}
+  .card p{color:#43464c;font-size:.97rem}
+  .steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:18px;counter-reset:step}
+  .step{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:22px}
+  .step b{display:block;margin-bottom:6px}
+  .step p{color:#43464c;font-size:.95rem}
+  .seal-row{display:flex;gap:34px;align-items:center;flex-wrap:wrap}
+  .seal-row img{width:170px;height:170px;flex:none}
+  .seal-row div{flex:1;min-width:280px}
+  ul.tight{list-style:none}
+  ul.tight li{padding:7px 0 7px 26px;position:relative;color:#33373d}
+  ul.tight li::before{content:"";position:absolute;left:0;top:14px;width:12px;height:12px;border-radius:50%;background:var(--green)}
+  .note{border-left:4px solid var(--green);background:#eefaf2;padding:18px 22px;border-radius:0 var(--radius) var(--radius) 0;max-width:820px}
+  /* Contact + footer */
+  .contact{text-align:center}
+  .contact p{color:var(--muted);max-width:620px;margin:0 auto 24px}
+  footer{border-top:1px solid var(--line);padding:34px 0 44px;color:var(--muted);font-size:.92rem}
+  footer .cols{display:flex;gap:28px;flex-wrap:wrap;align-items:flex-start}
+  footer img{width:38px;height:38px}
+  footer .spacer{flex:1}
+  @media (max-width:640px){.hero h1{font-size:2rem}.nav nav{display:none}}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <img src="assets/outer-ring-logo-flat.png" alt="Outer Ring logo">
+    <div class="brand">
+      <strong>Outer Ring — Testing &amp; Research</strong>
+      <span>a division of <a href="https://unlimitedapps.dev">Unlimited Apps</a></span>
+    </div>
+    <div class="spacer"></div>
+    <nav>
+      <a href="#services">Services</a>
+      <a href="#team">The Team</a>
+      <a href="#how">How a Run Works</a>
+      <a href="#b2b">B2B Testing</a>
+    </nav>
+    <a class="btn" href="#contact" style="margin-left:22px">Contact</a>
+  </div>
+</header>
+
+<div class="hero">
+  <div class="wrap">
+    <img class="seal" src="assets/outer-ring-logo-seal.png" alt="Outer Ring seal of approval">
+    <h1>Your product, tested the way your customers will actually use it.</h1>
+    <div class="tag">Product testing · User research · R&amp;D</div>
+    <p class="promise">Outer Ring is a standing team of 69 researchers who run your real, live product end to end — signup, core flows, checkout, all of it — and report back in their own words, with a clear verdict and full cost accounting.</p>
+    <a class="btn" href="mailto:contact@outerringresearch.com">Start a conversation</a>
+    <a class="btn ghost" href="#services" style="margin-left:10px">See the services</a>
+    <div class="verdict-chips">
+      <span class="chip cleared">CLEARED</span>
+      <span class="chip fixes">FIXES REQUIRED</span>
+      <span class="chip held">HELD</span>
+    </div>
+  </div>
+</div>
+
+<section id="services">
+  <div class="wrap">
+    <h2>Nine services, one standard: true live experience</h2>
+    <p class="lede">Every engagement runs on the real product — never a staging copy, never a script-reading walkthrough. Each of the nine segments of our mark stands for one of these services.</p>
+    <div class="grid">
+      <div class="card"><span class="num">1</span><h3>Pre-launch product testing</h3><p>Full-team runs on the real, live product before launch. Every run ends in a verdict: CLEARED, FIXES REQUIRED, or HELD.</p></div>
+      <div class="card"><span class="num">2</span><h3>Generational testing</h3><p>Four cohorts — 18–29, 30–44, 45–59, and 60+ — because a product that only makes sense to one generation has a blind spot.</p></div>
+      <div class="card"><span class="num">3</span><h3>Industry testing</h3><p>One researcher per real industry, testing your product the way their trade would actually pick it up and use it.</p></div>
+      <div class="card"><span class="num">4</span><h3>Product inspection</h3><p>Systematic A–Z inspection of flows and surfaces — the details a fast happy-path pass never touches.</p></div>
+      <div class="card"><span class="num">5</span><h3>B2B department &amp; cross-functional testing</h3><p>Department seats plus the handoff chains between them — where B2B products succeed or fail. <a href="#b2b">More below</a>.</p></div>
+      <div class="card"><span class="num">6</span><h3>Voice &amp; conversational product testing</h3><p>Session reports carry what the tester and the product actually said — not a summary of what was probably meant.</p></div>
+      <div class="card"><span class="num">7</span><h3>Checkout &amp; payments testing</h3><p>Real checkout end to end: promo codes, declines, and refunds exercised on proper test lanes.</p></div>
+      <div class="card"><span class="num">8</span><h3>User research</h3><p>Structured findings that report what is right as well as what is wrong — both are decisions you need to make.</p></div>
+      <div class="card"><span class="num">9</span><h3>Exploratory research &amp; R&amp;D</h3><p>Open-ended exploration of products, markets, and questions that do not fit a checklist yet.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="team" class="alt">
+  <div class="wrap">
+    <h2>The team: 69 researchers, three squads, every run</h2>
+    <p class="lede">This is a permanent, named team — not a rotating crowd panel. All three squads run on every product, every run, so every verdict carries generational, industry, and inspection coverage at once.</p>
+    <div class="grid">
+      <div class="card"><h3>The Generations</h3><p>Researchers across four age cohorts — 18–29, 30–44, 45–59, and 60+ — testing how the product lands with each generation that will use it.</p></div>
+      <div class="card"><h3>The 48</h3><p>One researcher for each of 48 real industries, bringing the habits, vocabulary, and expectations of their working world to your product.</p></div>
+      <div class="card"><h3>The A–Z</h3><p>Systematic inspectors who work a product end to end, surface by surface, so nothing ships unexamined just because it sat off the main path.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="how">
+  <div class="wrap">
+    <h2>How a run works</h2>
+    <p class="lede">One engagement, five steps, nothing hidden.</p>
+    <div class="steps">
+      <div class="step"><b>1 · Brief</b><p>We agree the product, the flows that matter, and what a pass looks like.</p></div>
+      <div class="step"><b>2 · Full-team run</b><p>All three squads use the real, live product end to end — including checkout where it applies.</p></div>
+      <div class="step"><b>3 · Session reports</b><p>You receive what each tester did and said, in their own words — the evidence, not a digest of it.</p></div>
+      <div class="step"><b>4 · Roll-up verdict</b><p>CLEARED, FIXES REQUIRED, or HELD. Nothing is called clear until it is fixed.</p></div>
+      <div class="step"><b>5 · Full cost accounting</b><p>Every engagement closes with a complete accounting of what the run cost and what it covered.</p></div>
+    </div>
+    <div class="seal-row" style="margin-top:44px">
+      <img src="assets/outer-ring-logo-seal.png" alt="Outer Ring seal of approval">
+      <div>
+        <h3 style="font-size:1.25rem;margin-bottom:8px">The seal on your report is the verdict you can stand behind</h3>
+        <p style="color:#43464c">Every delivered report carries the Outer Ring seal — the mark that a full-team run happened on the real product, that the findings are the testers' own words, and that the verdict was earned, not assigned. A HELD verdict blocks a launch recommendation until the blocking findings are fixed and re-proven.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="b2b" class="alt">
+  <div class="wrap">
+    <h2>B2B testing: departments and the chains between them</h2>
+    <p class="lede">A B2B product is not used by lone users screen by screen — it is used by an organization. So we test it as an organization: department seats, and the handoffs that cross them, because B2B failures live at the handoffs — permissions, approvals, and data passing between roles.</p>
+    <div class="grid">
+      <div class="card"><h3>Department seats</h3>
+        <ul class="tight">
+          <li>Owner / Executive</li><li>Admin / IT</li><li>Finance / Billing</li><li>Sales</li>
+          <li>Operations</li><li>Support / Customer Success</li><li>Compliance / Security</li><li>Frontline end users</li>
+        </ul>
+      </div>
+      <div class="card"><h3>Cross-functional chains</h3>
+        <ul class="tight">
+          <li>Procure → Onboard → Use → Support → Bill → Renew</li>
+          <li>Invite → Permissions → Collaborate → Audit</li>
+          <li>Lead → Quote → Contract → Deliver → Invoice</li>
+        </ul>
+        <p style="margin-top:10px">A chain passes only if every handoff lands. B2B verdicts report department coverage and chain results alongside individual sessions.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>Stated openly: how our researchers test</h2>
+    <div class="note">
+      <p>Our engagements run from standardized researcher mailboxes on the <strong>mailboxmeadow.com</strong> domain — the standard testing mailbox for our work, named here on purpose. Test runs always come from those mailboxes, so your team can recognize, allow-list, and audit our testers' activity in your own systems. This address — outerringresearch.com — is our contact front door only; it never touches a test session.</p>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="alt">
+  <div class="wrap contact">
+    <h2>Work with our team</h2>
+    <p>Tell us what you are about to launch and what a confident launch looks like for you. We will reply with how a run would be staffed, what it would cover, and what it would cost.</p>
+    <a class="btn" href="mailto:contact@outerringresearch.com">contact@outerringresearch.com</a>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap cols">
+    <img src="assets/outer-ring-logo-flat.png" alt="Outer Ring logo">
+    <div>
+      <strong style="color:var(--ink)">Outer Ring — Testing &amp; Research</strong><br>
+      A division of <a href="https://unlimitedapps.dev">Unlimited Apps</a> · Product testing · User research · R&amp;D
+    </div>
+    <div class="spacer"></div>
+    <div>
+      Contact: <a href="mailto:contact@outerringresearch.com">contact@outerringresearch.com</a><br>
+      Parent: <a href="https://unlimitedapps.dev">unlimitedapps.dev</a>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
