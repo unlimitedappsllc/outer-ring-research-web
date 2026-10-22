@@ -104,6 +104,36 @@
   .footnote .fn-tag{font-family:var(--mono);font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);margin-bottom:10px}
   .footnote p{font-size:1rem}
 
+  /* Engage — storefront + intake */
+  .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-bottom:20px}
+  .card{border:1px solid var(--line-dark);background:#fff;padding:28px 26px;display:flex;flex-direction:column}
+  .card .shape{font-family:var(--mono);font-size:.7rem;letter-spacing:.16em;text-transform:uppercase;color:var(--green-dark);margin-bottom:10px}
+  .card h3{font-family:var(--serif);font-size:1.32rem;font-weight:700;color:var(--ink);line-height:1.25;margin-bottom:8px}
+  .card .price{font-family:var(--serif);font-size:1.22rem;color:var(--ink);margin-bottom:16px}
+  .card ul{list-style:none;border-top:1px solid var(--line);margin-bottom:18px}
+  .card ul li{padding:8px 0;border-bottom:1px solid var(--line);font-size:.95rem}
+  .card .best{margin-top:auto;font-family:var(--serif);font-style:italic;color:var(--ink);font-size:.98rem}
+  .smallprint{font-size:.88rem;color:var(--muted);max-width:80ch}
+  .intake{margin-top:56px;border-top:2px solid var(--ink);padding-top:36px}
+  .intake h3{font-family:var(--serif);font-size:1.55rem;color:var(--ink);margin-bottom:6px}
+  .intake .sub{color:var(--muted);max-width:66ch;margin-bottom:30px}
+  .fgrid{display:grid;grid-template-columns:1fr 1fr;gap:20px 26px;margin-bottom:22px}
+  .fld.full{grid-column:1/-1}
+  .fld label,.fld legend{font-family:var(--mono);font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;color:var(--gray);display:block;margin-bottom:7px}
+  .fld fieldset{border:0}
+  .fld input[type=text],.fld input[type=email],.fld input[type=url],.fld input[type=date],.fld textarea{width:100%;padding:10px 12px;border:1px solid var(--line-dark);border-radius:2px;background:#fff;font-family:var(--sans);font-size:1rem;color:var(--body)}
+  .fld textarea{min-height:96px;resize:vertical}
+  .opts{display:grid;gap:7px}
+  .opts label,.checks label{font-family:var(--sans);font-size:.96rem;letter-spacing:0;text-transform:none;color:var(--body);display:flex;gap:9px;align-items:flex-start;margin-bottom:0}
+  .opts input,.checks input{margin-top:5px;flex:none}
+  .checks{display:grid;grid-template-columns:1fr 1fr;gap:9px 24px}
+  .form-status{margin-top:18px;font-size:1rem}
+  .form-status.err{color:#9c2721}
+  .confirm{border:1px solid var(--line-dark);background:#fff;padding:30px 28px;max-width:70ch}
+  .confirm h3{font-family:var(--serif);color:var(--ink);margin-bottom:6px}
+  @media (max-width:860px){.cards{grid-template-columns:1fr}}
+  @media (max-width:640px){.fgrid,.checks{grid-template-columns:1fr}}
+
   /* Contact + footer */
   .contact{text-align:left}
   .contact h2{margin-bottom:10px}
@@ -132,8 +162,9 @@
       <a href="#services">Services</a>
       <a href="#how">Verdict</a>
       <a href="#b2b">B2B Testing</a>
+      <a href="#engage">Engage</a>
     </nav>
-    <a class="btn" href="#contact">Contact</a>
+    <a class="btn" href="#engage">Contact</a>
   </div>
 </header>
 
@@ -147,7 +178,7 @@
         <p class="markline">The nine segments of our mark are the nine services of the Ring — one segment for each service we offer.</p>
         <p class="promise">Outer Ring is a standing research team that runs your real, live product end to end — signup, core flows, checkout, all of it — and reports back in their own words, with a clear verdict and full cost accounting.</p>
         <div class="cta-row">
-          <a class="btn" href="mailto:contact@outerringresearch.com">Start a conversation</a>
+          <a class="btn" href="#engage">Start a conversation</a>
           <a class="btn ghost" href="#services">See the services</a>
         </div>
       </div>
@@ -234,6 +265,142 @@
   </div>
 </section>
 
+<section id="engage">
+  <div class="wrap">
+    <div class="eyebrow">04 · Engage</div>
+    <h2>Three ways to engage the Ring</h2>
+    <p class="lede">Every engagement is scoped from your brief and quoted fixed before any work begins. Choose the shape that fits where your product is — or send the brief below and we will recommend one.</p>
+    <div class="cards">
+      <div class="card">
+        <div class="shape">Full Service</div>
+        <h3>The Full Run</h3>
+        <div class="price">From $4,900 per product</div>
+        <ul>
+          <li>All nine services in one engagement</li>
+          <li>Session reports in the researchers' own words</li>
+          <li>A verdict under the Outer Ring seal</li>
+          <li>Full cost accounting</li>
+        </ul>
+        <p class="best">Best for: a launch or a major release.</p>
+      </div>
+      <div class="card">
+        <div class="shape">Partial Services</div>
+        <h3>One service, or a bundle</h3>
+        <div class="price">From $950 per service</div>
+        <ul>
+          <li>Any single service, on its own</li>
+          <li>Bundles of three or more: 15% off the combined fee</li>
+          <li>Session reports and a verdict for the scope tested</li>
+        </ul>
+        <p class="best">Best for: a known risk area.</p>
+      </div>
+      <div class="card">
+        <div class="shape">Continuous</div>
+        <h3>Research Retainer</h3>
+        <div class="price">From $1,900 per month</div>
+        <ul>
+          <li>One partial-scope run every month</li>
+          <li>Standing exploratory research between runs</li>
+          <li>A quarterly roll-up of findings</li>
+          <li>Cancel anytime</li>
+        </ul>
+        <p class="best">Best for: teams shipping continuously.</p>
+      </div>
+    </div>
+    <p class="smallprint">Introductory pricing, subject to change. Every engagement is quoted fixed from your brief before any work begins — the quote you accept is the price you pay.</p>
+
+    <div class="intake">
+      <h3>Tell us about the product</h3>
+      <p class="sub">Briefs land with the Ring team, and every one is answered personally.</p>
+      <form id="intake-form">
+        <div class="fgrid">
+          <div class="fld">
+            <label for="f-name">Your name *</label>
+            <input id="f-name" name="name" type="text" required>
+          </div>
+          <div class="fld">
+            <label for="f-company">Company</label>
+            <input id="f-company" name="company" type="text">
+          </div>
+          <div class="fld">
+            <label for="f-email">Work email *</label>
+            <input id="f-email" name="email" type="email" required>
+          </div>
+          <div class="fld">
+            <label for="f-product">Product name *</label>
+            <input id="f-product" name="product" type="text" required>
+          </div>
+          <div class="fld full">
+            <label for="f-url">Product URL *</label>
+            <input id="f-url" name="product_url" type="url" required placeholder="https://">
+          </div>
+          <div class="fld">
+            <fieldset>
+              <legend>Engagement shape</legend>
+              <div class="opts">
+                <label><input type="radio" name="engagement_shape" value="Full Service — the Full Run" checked> Full Service — the Full Run</label>
+                <label><input type="radio" name="engagement_shape" value="Partial services"> Partial services</label>
+                <label><input type="radio" name="engagement_shape" value="Continuous — research retainer"> Continuous — research retainer</label>
+                <label><input type="radio" name="engagement_shape" value="Not sure yet"> Not sure yet</label>
+              </div>
+            </fieldset>
+          </div>
+          <div class="fld">
+            <fieldset>
+              <legend>Product type</legend>
+              <div class="opts">
+                <label><input type="radio" name="product_type" value="B2C" checked> B2C</label>
+                <label><input type="radio" name="product_type" value="B2B"> B2B</label>
+                <label><input type="radio" name="product_type" value="Both"> Both</label>
+              </div>
+            </fieldset>
+          </div>
+          <div class="fld full">
+            <fieldset>
+              <legend>Services of interest — mainly for partial engagements</legend>
+              <div class="checks">
+                <label><input type="checkbox" name="services" value="Pre-launch product testing — from $1,900"> Pre-launch product testing — from $1,900</label>
+                <label><input type="checkbox" name="services" value="Generational testing — from $1,450"> Generational testing — from $1,450</label>
+                <label><input type="checkbox" name="services" value="Industry testing — from $1,450"> Industry testing — from $1,450</label>
+                <label><input type="checkbox" name="services" value="Product inspection — from $950"> Product inspection — from $950</label>
+                <label><input type="checkbox" name="services" value="B2B department &amp; cross-functional testing — from $2,400"> B2B department &amp; cross-functional testing — from $2,400</label>
+                <label><input type="checkbox" name="services" value="Voice &amp; conversational product testing — from $1,150"> Voice &amp; conversational product testing — from $1,150</label>
+                <label><input type="checkbox" name="services" value="Checkout &amp; payments testing — from $1,150"> Checkout &amp; payments testing — from $1,150</label>
+                <label><input type="checkbox" name="services" value="User research — from $1,750"> User research — from $1,750</label>
+                <label><input type="checkbox" name="services" value="Exploratory research &amp; R&amp;D — from $1,750"> Exploratory research &amp; R&amp;D — from $1,750</label>
+                <label><input type="checkbox" name="services" value="Partner-experience track — from $1,450 (included in a Full Run)"> Partner-experience track — from $1,450 (included in a Full Run)</label>
+              </div>
+            </fieldset>
+          </div>
+          <div class="fld">
+            <label for="f-b2b">For B2B: which departments or handoffs matter most</label>
+            <input id="f-b2b" name="b2b_focus" type="text">
+          </div>
+          <div class="fld">
+            <label for="f-date">Target launch or decision date</label>
+            <input id="f-date" name="target_date" type="date">
+          </div>
+          <div class="fld full">
+            <label for="f-attn">What should we pay special attention to?</label>
+            <textarea id="f-attn" name="attention"></textarea>
+          </div>
+          <div class="fld full">
+            <label for="f-else">Anything else</label>
+            <textarea id="f-else" name="anything_else"></textarea>
+          </div>
+        </div>
+        <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
+        <button class="btn" type="submit" id="intake-submit">Send the brief</button>
+      </form>
+      <div id="intake-done" class="confirm" hidden>
+        <h3>Brief received.</h3>
+        <p>We read every brief personally and reply from contact@outerringresearch.com.</p>
+      </div>
+      <p id="intake-error" class="form-status err" hidden>Something went wrong sending that — email the same details to <a href="mailto:contact@outerringresearch.com">contact@outerringresearch.com</a>.</p>
+    </div>
+  </div>
+</section>
+
 <section>
   <div class="wrap">
     <div class="footnote">
@@ -245,7 +412,7 @@
 
 <section id="contact" class="alt">
   <div class="wrap contact">
-    <div class="eyebrow">04 · Contact</div>
+    <div class="eyebrow">05 · Contact</div>
     <h2>Work with our team</h2>
     <p>Tell us what you are about to launch and what a confident launch looks like for you. We will reply with what a run would cover and what it would cost.</p>
     <a class="btn" href="mailto:contact@outerringresearch.com">contact@outerringresearch.com</a>
@@ -266,6 +433,62 @@
     </div>
   </div>
 </footer>
+
+<script>
+(function(){
+  var form=document.getElementById('intake-form');
+  if(!form)return;
+  form.addEventListener('submit',function(e){
+    e.preventDefault();
+    if(!form.reportValidity())return;
+    var btn=document.getElementById('intake-submit');
+    var err=document.getElementById('intake-error');
+    err.hidden=true;
+    btn.disabled=true;
+    btn.textContent='Sending…';
+    var services=[];
+    form.querySelectorAll('input[name="services"]:checked').forEach(function(c){services.push(c.value);});
+    function radioVal(name){var r=form.querySelector('input[name="'+name+'"]:checked');return r?r.value:'';}
+    var product=document.getElementById('f-product').value;
+    var data={
+      name:document.getElementById('f-name').value,
+      company:document.getElementById('f-company').value,
+      email:document.getElementById('f-email').value,
+      product:product,
+      product_url:document.getElementById('f-url').value,
+      engagement_shape:radioVal('engagement_shape'),
+      services_of_interest:services.join('; '),
+      product_type:radioVal('product_type'),
+      b2b_departments_or_handoffs:document.getElementById('f-b2b').value,
+      target_date:document.getElementById('f-date').value,
+      special_attention:document.getElementById('f-attn').value,
+      anything_else:document.getElementById('f-else').value,
+      _subject:'Outer Ring intake — '+product,
+      _template:'table',
+      _captcha:'false',
+      _honey:form.querySelector('input[name="_honey"]').value
+    };
+    fetch('https://formsubmit.co/ajax/contact@outerringresearch.com',{
+      method:'POST',
+      headers:{'Content-Type':'application/json','Accept':'application/json'},
+      body:JSON.stringify(data)
+    }).then(function(r){
+      return r.json().catch(function(){return{};}).then(function(j){
+        if(r.ok&&(j.success===true||j.success==='true')){
+          form.hidden=true;
+          document.getElementById('intake-done').hidden=false;
+        }else{
+          throw new Error('send failed');
+        }
+      });
+    }).catch(function(){
+      btn.disabled=false;
+      btn.textContent='Send the brief';
+      err.hidden=false;
+    });
+  });
+})();
+</script>
 
 </body>
 </html>
