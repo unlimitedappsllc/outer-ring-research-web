@@ -1,6 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-7VV4E5VREV"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-7VV4E5VREV');
+</script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Outer Ring — Testing &amp; Research | Pre-Launch Product Testing &amp; User Research</title>
@@ -187,8 +194,8 @@
         <p class="markline">The nine segments of our mark are the nine services of the Ring — one segment for each service we offer.</p>
         <p class="promise">Outer Ring is a standing research team that runs your real, live product end to end — signup, core flows, checkout, all of it — and reports back in their own words, with a clear verdict and full cost accounting.</p>
         <div class="cta-row">
-          <a class="btn" href="#engage">Start a conversation</a>
-          <a class="btn ghost" href="#services">See the services</a>
+          <a class="btn" href="#watch">▶ Start here — watch the presentation</a>
+          <a class="btn ghost" href="#engage">Start a conversation</a>
         </div>
       </div>
       <figure class="hero-seal">
@@ -201,10 +208,10 @@
 
 <section id="watch">
   <div class="wrap">
-    <div class="eyebrow">The public presentation</div>
+    <div class="eyebrow">Start here</div>
     <h2>The Ring, in just over three minutes</h2>
-    <p class="lede">What the Ring is, the nine services, and the verdict every engagement ends in — the short public cut of our presentation, narrated.</p>
-    <video controls preload="metadata" poster="assets/public-cut-poster.jpg" style="width:100%;max-width:880px;display:block;margin:6px auto 30px;border:1px solid var(--line)">
+    <p class="lede">Every customer journey with the Ring begins with this presentation. Watch it first, and you'll know what the Ring is, what it does, and what to expect — the nine services, the shapes of an engagement, and the verdict every run ends in.</p>
+    <video id="public-cut-video" controls preload="metadata" poster="assets/public-cut-poster.jpg" style="width:100%;max-width:880px;display:block;margin:6px auto 30px;border:1px solid var(--line)">
       <source src="assets/outer-ring-public-cut.mp4" type="video/mp4">
       Your browser cannot play the video — <a href="assets/outer-ring-public-cut.mp4">download it here</a>.
     </video>
@@ -545,5 +552,36 @@
 })();
 </script>
 
+<div id="cookie-bar" style="display:none;position:fixed;left:0;right:0;bottom:0;background:#1c1c1c;color:#eee;padding:12px 18px;font-size:.9rem;z-index:60;text-align:center">
+  <span>We use cookies for analytics — to see where visitors come from, what they watch, and what to improve.</span>
+  <button id="cookie-accept" style="margin-left:.8rem">Accept</button>
+  <button id="cookie-necessary" style="margin-left:.4rem">Only necessary</button>
+</div>
+<script>
+(function(){
+  var KEY='orr-analytics-choice';
+  var bar=document.getElementById('cookie-bar');
+  function disableGA(){ window['ga-disable-G-7VV4E5VREV']=true; if(window.gtag){ gtag('consent','update',{'analytics_storage':'denied'}); } }
+  var choice=null; try{ choice=localStorage.getItem(KEY); }catch(e){}
+  if(choice==='necessary'){ disableGA(); }
+  else if(!choice){ bar.style.display='block'; }
+  document.getElementById('cookie-accept').addEventListener('click',function(){
+    try{ localStorage.setItem(KEY,'all'); }catch(e){}
+    bar.style.display='none';
+  });
+  document.getElementById('cookie-necessary').addEventListener('click',function(){
+    try{ localStorage.setItem(KEY,'necessary'); }catch(e){}
+    disableGA(); bar.style.display='none';
+  });
+  var v=document.getElementById('public-cut-video');
+  if(v){
+    var fired={};
+    function send(name,params){ if(fired[name])return; fired[name]=true; if(window.gtag){ var p={video_title:'Outer Ring - Public Cut'}; if(params){ for(var k in params){ p[k]=params[k]; } } gtag('event',name,p); } }
+    v.addEventListener('play',function(){ send('video_play'); });
+    v.addEventListener('timeupdate',function(){ if(!v.duration)return; var pct=Math.floor(v.currentTime/v.duration*100); [25,50,75].forEach(function(q){ if(pct>=q){ send('video_progress_'+q,{video_percent:q}); } }); });
+    v.addEventListener('ended',function(){ send('video_complete',{video_percent:100}); });
+  }
+})();
+</script>
 </body>
 </html>
